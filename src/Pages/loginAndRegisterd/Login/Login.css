@@ -1,0 +1,14 @@
+.background {
+  background: linear-gradient(rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.842)),
+    url(../../../images/bannerbackground.png);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  padding: 1px;
+  backdrop-filter: blur(10px);
+}
+.login-box {
+  max-width: 1000px;
+  float: none;
+  margin: 150px auto;
+}
