@@ -13,7 +13,7 @@ const MakeAdmin = () => {
   const handleMakeAdmin = (e) => {
     const user = { email };
     e.preventDefault();
-    fetch("http://localhost:5000/users/admin", {
+    fetch("https://limitless-oasis-13774.herokuapp.com/users/admin", {
       method: "PUT",
       headers: {
         "Content-type": "application/json",

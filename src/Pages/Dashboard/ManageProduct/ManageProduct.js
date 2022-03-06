@@ -6,7 +6,7 @@ const ManageProduct = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://limitless-oasis-13774.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, [products]);
@@ -15,7 +15,7 @@ const ManageProduct = () => {
     const deleteConfirmation = window.confirm("Do you want to delete product?");
 
     if (deleteConfirmation) {
-      const productUri = `http://localhost:5000/product/${productId}`;
+      const productUri = `https://limitless-oasis-13774.herokuapp.com/product/${productId}`;
 
       fetch(productUri, {
         method: "DELETE",

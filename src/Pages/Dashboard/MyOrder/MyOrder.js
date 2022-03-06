@@ -8,7 +8,7 @@ const MyOrder = () => {
   const { user } = useAuth();
 
   useEffect(() => {
-    const myOrderUri = `http://localhost:5000/orders/${user.email}`;
+    const myOrderUri = `https://limitless-oasis-13774.herokuapp.com/orders/${user.email}`;
 
     fetch(myOrderUri)
       .then((res) => res.json())
@@ -21,7 +21,7 @@ const MyOrder = () => {
     );
 
     if (cancelConfirmation) {
-      const productUri = `http://localhost:5000/orders/${productId}`;
+      const productUri = `https://limitless-oasis-13774.herokuapp.com/orders/${productId}`;
       fetch(productUri, {
         method: "DELETE",
       })

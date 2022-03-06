@@ -12,7 +12,7 @@ const Products = () => {
   useEffect(() => {
     setLoading(true);
 
-    fetch("http://localhost:5000/products")
+    fetch("https://limitless-oasis-13774.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);

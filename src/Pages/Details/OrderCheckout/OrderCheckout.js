@@ -21,7 +21,7 @@ const OrderCheckout = () => {
   useEffect(() => {
     setLoading(true);
 
-    fetch(`http://localhost:5000/product/${productId}`)
+    fetch(`https://limitless-oasis-13774.herokuapp.com/product/${productId}`)
       .then((res) => res.json())
       .then((data) => {
         setOrderedProduct(data);
@@ -30,7 +30,7 @@ const OrderCheckout = () => {
   }, [productId]);
 
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/orders/", {
+    fetch("https://limitless-oasis-13774.herokuapp.com/orders/", {
       method: "POST",
       headers: {
         "content-type": "application/json",

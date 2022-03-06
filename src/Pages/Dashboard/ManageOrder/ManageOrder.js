@@ -6,14 +6,14 @@ const ManageOrder = () => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/orders")
+    fetch("https://limitless-oasis-13774.herokuapp.com/orders")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [orders]);
 
   /* 
         const handleUpdateStatus = productId => {
-            fetch(`http://localhost:5000/orders/${productId}`, {
+            fetch(`https://limitless-oasis-13774.herokuapp.com/orders/${productId}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application.json'
@@ -31,7 +31,7 @@ const ManageOrder = () => {
     const deleteConfirmation = window.confirm("Do you want delete the order?");
 
     if (deleteConfirmation) {
-      const productUri = `http://localhost:5000/orders/${orderId}`;
+      const productUri = `https://limitless-oasis-13774.herokuapp.com/orders/${orderId}`;
       fetch(productUri, {
         method: "DELETE",
       })

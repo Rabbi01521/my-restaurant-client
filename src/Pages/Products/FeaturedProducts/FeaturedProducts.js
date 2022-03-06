@@ -6,7 +6,7 @@ const FeaturedProducts = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://limitless-oasis-13774.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data.slice(0, 6));

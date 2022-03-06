@@ -39,20 +39,20 @@ const SingleTestimonial = ({ testimonial }) => {
           >
             {testimonial?.name}
           </h5>
+          <div className="pt-3 mx-auto" style={{ textAlign: "left" }}>
+            <Rating
+              className={`${styles.ratings}`}
+              readonly
+              initialRating={testimonial?.rating}
+              emptySymbol="far fa-star text-warning ms-1 p-0"
+              fullSymbol="fas fa-star text-warning ms-1 p-0"
+            ></Rating>
+          </div>
         </Col>
       </Row>
       <div>
         <div className={`py-1 ${styles.commentSection}`}>
           <small>{testimonial?.comment}</small>
-        </div>
-        <div className="pt-3 mx-auto">
-          <Rating
-            className={`${styles.ratings}`}
-            readonly
-            initialRating={testimonial?.rating}
-            emptySymbol="far fa-star text-warning ms-1 p-0"
-            fullSymbol="fas fa-star text-warning ms-1 p-0"
-          ></Rating>
         </div>
       </div>
     </Card>

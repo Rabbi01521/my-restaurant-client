@@ -17,7 +17,7 @@ const ProductDetails = () => {
   useEffect(() => {
     setLoading(true);
 
-    fetch(`http://localhost:5000/product/${productId}`)
+    fetch(`https://limitless-oasis-13774.herokuapp.com/product/${productId}`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data);

@@ -3,9 +3,9 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 export const getReviews = createAsyncThunk("reviews/getReviews", async () => {
-  const response = await fetch("http://localhost:5000/reviews").then((res) =>
-    res.json()
-  );
+  const response = await fetch(
+    "https://limitless-oasis-13774.herokuapp.com/reviews"
+  ).then((res) => res.json());
   return response;
 });
 
@@ -14,7 +14,7 @@ export const addReview = createAsyncThunk(
   async (data, { rejectWithValue }) => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/add-review",
+        "https://limitless-oasis-13774.herokuapp.com/add-review",
         data
       );
       return response.data;
